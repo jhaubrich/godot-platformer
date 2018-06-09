@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Youtube Tutorial 1"
+config/name="yt-Platformer"
 run/main_scene="res://Worlds/World-1.tscn"
 config/icon="res://icon.png"
 
