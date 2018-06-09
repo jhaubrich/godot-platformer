@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DIE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=4]
+
+[node name="World-3" type="Node2D" index="0"]
+
+[node name="DIE" parent="." index="0" instance=ExtResource( 1 )]
+
+next_world = "res://Worlds/World-1.tscn"
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 458750, 0, 196608, 458751, 0, 196609, 393216, 0, 196609, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196609, 393224, 0, 196609, 393225, 0, 196609, 393226, 0, 196609, 393227, 0, 196609, 393228, 0, 196609, 393229, 0, 196610 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -70.8156, -70.8887 )
+
+[node name="WorldComplete" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 809.448, 281.394 )
+
+
